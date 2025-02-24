@@ -6,11 +6,17 @@
 	value="{{actor.name}}" 
 	placeholder="Name"/>
   </div>
+  <div class="w-hero-health">
+    {{> 'systems/wushu/templates/partials/healthblock.hbs'}}
+  </div>
   <div class="w-hero-traits">
     {{> 'systems/wushu/templates/partials/traitblock.hbs'}}
   </div>
   <div class="w-hero-specials">
     {{> 'systems/wushu/templates/partials/specialblock.hbs'}}
+  </div>
+   <div class="w-hero-setbacks">
+    {{> 'systems/wushu/templates/partials/setbackblock.hbs'}}
   </div>
   <div class="w-hero-story">
     {{> 'systems/wushu/templates/partials/storyblock.hbs'}}
