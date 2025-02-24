@@ -1,0 +1,76 @@
+{
+    "WUSHU": {
+        "ui": {  
+            "dialogs":{
+                "buttons":{
+                    "yes":"Yes",
+                    "no":"No",
+                    "roll":"Roll",
+                    "cancel":"Cancel"
+                },
+                "confirmations":{
+                    "delete_trait":"Are you sure you want to delete this Trait?",
+                    "delete_special":"Are you sure you want to delete this Special Something?"
+                },
+                "interaction":{
+                    "divide_pool":"Choose how to divide your dice:",
+                    "out_of_fight":"You are Out of the Fight."
+                },
+                "chat":{
+                    "atk_outcome":"",
+                    "def_outcome":""
+                },
+                "titles":{
+                    "item":"Item Sheet",
+                    "actor":"Character Sheet",
+                    "challenge":"Challenge Sheet"
+                }
+            },
+            "sheets":{
+                "backstory":"Backstory",
+                "description":"Description",
+                "notes":"Notes",
+                "consequence":"Consequences",
+                "name":"Name"
+            },
+            "items":{
+                "categories":{
+                    "combat":"Combat",
+                    "social":"Social",
+                    "technical":"Technical",
+                    "other":"Other"
+                }
+            }
+        },
+        "prefs":{
+            "dice":{
+                "D6":"D6",
+                "D8":"D8",
+                "D10":"D10",
+                "D12":"D12"
+            }
+        },
+        "stats":{
+            "health":"Health",
+            "threat":"Threat",
+            "goal":"Goal",
+            "time":"Time Limit"
+        },
+        "items":{
+            "trait":"Trait",
+            "weakness":"Weakness",
+            "feature":"Feature",
+            "special":"Special Something",
+            "category":"Category"
+        },
+        "characters":{
+            "hero":"Hero",
+            "nemesis":"Nemesis",
+            "mook":"Mook"
+        },
+        "game":{
+            "secondary_goal":"Secondary Goal",
+            "challenge":"Challenge"
+        }
+    }
+}

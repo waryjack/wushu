@@ -1,0 +1,66 @@
+const { ApplicationV2, HandlebarsApplicationMixin } = foundry.applications.api
+
+export class WushuSettingh extends HandlebarsApplicationMixin(ApplicationV2) {
+    static DEFAULT_OPTIONS = {
+        id: "prefs-menu",
+        position:{
+        },
+        window:{
+            title:"Wushu Preferences"
+        },
+        tag: "form",
+        form: {
+          handler: EWSettingsDialog.updateSettings,
+          submitOnChange: false,
+          closeOnSubmit: true
+        },
+        actions: {
+            updateSettings : EWSettingsDialog.updateSettings,
+            restoreDefaults: EWSettingsDialog.restoreDefaults
+        }
+
+      }
+
+    static PARTS = {
+        header: {
+            template: "systems/ewhen/templates/menus/header.hbs"
+        }, 
+        tabs:{
+           template: "systems/ewhen/templates/menus/tabs.hbs"
+        },
+        general: {
+            template: "systems/ewhen/templates/menus/general.hbs"
+        },
+        initsettings: {
+            template:"systems/ewhen/templates/menus/initsettings.hbs"
+        },
+        trackers: {
+            template:"systems/ewhen/templates/menus/trackers.hbs"
+        },
+        custname: {
+            template:"systems/ewhen/templates/menus/custname.hbs"
+        },
+        footer: {
+            template: "templates/generic/form-footer.hbs"
+        }
+    }
+
+    get title() {
+        return;
+    }
+    async _prepareContext(context){
+        context.current = game.settings.get("wushu","prefs");
+        context.CONFIG = CONFIG.wushu;
+        context.yesno = {
+            "true":"WUSHU.ui.dialogs.buttons.yes",
+            "false":"WUSHU.ui.dialogs.buttons.no",
+        }
+        context.dicetype = {
+            '1d6': 'WUSHU.prefs.dice.D6',
+            '1d10': 'WUSHU.prefs.dice.D8',
+            '1d12': 'WUSHU.prefs.dice.D10',
+            '1d6': 'WUSHU.prefs.dice.D12'
+        }
+    }
+
+}

@@ -1,0 +1,70 @@
+{
+    "id": "wushu",
+    "title": "Wushu",
+    "description": "Simple system for Wushu RPG (Dan Bayn)",
+    "version": "0.1",
+    "compatibility": {
+      "minimum": "12",
+      "verified": "12",
+      "maximum":"13"
+    }, 
+    "authors": [
+      {
+        "name":"Chris Clouser",
+        "discord":"Cannyjack"
+      }
+    ],
+    "esmodules": [
+        "module/wushu.js"
+    ],
+    "documentTypes":{
+      "Actor": {
+        "hero": {
+          "htmlFields":["backstory"],
+          "filePathFields":["img"]
+        },
+        "nemesis":{
+          "htmlFields":["backstory","gm_notes"],
+          "filePathFields":["img"]
+        },
+        "mook":{
+          "htmlFields":["backstory","gm_notes"],
+          "filePathFields":["img"]
+        },
+       "challenge":{
+          "htmlFields":["description","consequence","gm_notes"],
+          "filePathFields":["img"]
+        }
+      },
+      "Item":{
+        "trait":{
+          "htmlFields":["description","features"],
+          "filePathFields":["img"]
+        },
+        "special":{
+          "htmlFields":["description"],
+          "filePathFields":["img"]
+        }
+      }
+    },
+    "scripts": [],
+    "styles": [
+        "styles/wushu.css"
+    ],
+    "languages": [
+        {
+          "lang": "en",
+          "name": "English",
+          "path": "lang/en.json"
+        }
+      ],
+    "grid":{
+      "distance":5,
+      "units":"ft"
+    },
+    "primaryTokenAttribute": "chi",
+    "url": "https://github.com/waryjack/wushu",
+    "manifest": "https://github.com/waryjack/wushu/releases/latest/download/system.json",
+    "download": "https://github.com/waryjack/wushu/releases/latest/download/ewhen-master.zip"
+
+}

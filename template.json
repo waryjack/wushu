@@ -1,0 +1,8 @@
+{
+    "Actor": {
+		"types": ["hero", "nemesis", "mook", "challenge"]
+	},
+    "Item": {
+        "types":["trait", "special"]
+    }
+}
