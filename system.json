@@ -15,7 +15,7 @@
       }
     ],
     "esmodules": [
-        "module/wushu.js"
+        "module/wushu.mjs"
     ],
     "documentTypes":{
       "Actor": {
@@ -65,6 +65,6 @@
     "primaryTokenAttribute": "chi",
     "url": "https://github.com/waryjack/wushu",
     "manifest": "https://github.com/waryjack/wushu/releases/latest/download/system.json",
-    "download": "https://github.com/waryjack/wushu/releases/latest/download/ewhen-master.zip"
+    "download": "https://github.com/waryjack/wushu/releases/latest/download/wushu-main.zip"
 
 }
