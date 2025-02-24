@@ -1,0 +1,26 @@
+<div>
+    <header>
+        <title>{{localize "WUSHU.dialog.titles.traitroll"}}</title>
+    </header>
+    <section>
+        <div class="flex-col">
+            <div class="flex-row">
+                <div class="flex-item">
+                    <h2>{{localize "WUSHU.dialog.titles.traitroll"}}</h2>
+                    <p>{{localize "WUSHU.dialog.interaction.rolling"}}{{trait}} ({{rating}})</p>
+                    <p>{{localize "WUSHU.interaction.divide_pool"}}</p>
+                </div>
+            </div>
+            <div class="flex-row">
+                <div class="flex-item">
+                    {{localize "WUSHU.dice.attack"}}
+                    <input type="text" name="atk" value="0" data-dtype="Number"/>
+                </div>
+                <div class="flex-item">
+                    {{localize "WUSHU.dice.defense"}}
+                    <input type="text" name="def" value="0" data-dtype="Number"/>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

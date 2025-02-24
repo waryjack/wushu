@@ -26,8 +26,8 @@ export default class WushuActorSheet extends HandlebarsApplicationMixin(ActorShe
     }
 
     get title() {
-        let itemtype = this.document.type;
-        return `Wushu ${game.i18n.localize(this.options.window.title)}: ${game.i18n.localize("WUSHU.items."+itemtype)}`
+        let type = this.document.type;
+        return `Wushu ${game.i18n.localize(this.options.window.title)}: ${game.i18n.localize("WUSHU.items."+type)}`
     }
     
     static PARTS = {
@@ -67,6 +67,18 @@ export default class WushuActorSheet extends HandlebarsApplicationMixin(ActorShe
                      break;
         }
 
+    }
+
+    /** @override */
+    _prepareContext() {
+        const data = this.actor.system;
+        data.config = CONFIG.wushu;
+        data.settings = game.settings.get("wushu","prefs");
+        
+        data.traits = this.actor.items.filter(i => i.type === "trait");
+        data.specials = this.actor.items.filter(i => i.type === "special");
+
+        return data;
     }
 
     static async _rollTrait(e,elem) {

@@ -37,6 +37,9 @@ export default class WushuItemSheet extends HandlebarsApplicationMixin(ItemSheet
         },
         special: {
              template: "systems/wushu/templates/itemsheets/special.hbs"
+        },
+        setback: {
+            template: "systems/wushu/templates/itemsheets/setback.hbs"
         }
     }
 
@@ -54,6 +57,9 @@ export default class WushuItemSheet extends HandlebarsApplicationMixin(ItemSheet
                 break;
             case "special":
                 options.parts.push("special");
+                break;
+            case "setback":
+                options.parts.push("setback");
                 break;
             default:
         }

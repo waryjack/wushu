@@ -1,8 +1,9 @@
 const {
     HTMLField, SchemaField, NumberField, StringField, BooleanField, FilePathField, ObjectField
   } = foundry.data.fields;
+import WushuActorData from "./basemodel.mjs";
 
-export default class WushuMookData extends foundry.abstract.TypeDataModel {
+export default class WushuMookData extends WushuActorData {
   static defineSchema() {
     return {
       img: new FilePathField({required:false, categories: ["IMAGE"]}),

@@ -17,6 +17,8 @@ export default class WushuItem extends Item {
         if (this.parent.type != "trait") return;
 
         // prompt here
+        const breakdown = WushuMessenger.rollPrompt(this.name, this.getRollData());
+        
         // formula is (xd6cs<rating)
         let aFormula = atk + "d6cs<=" + this.system.rating;
         let dFormula = def + "d6cs<=" + this.system.rating;
@@ -29,26 +31,19 @@ export default class WushuItem extends Item {
 
         aSux = atkRoll.total;
         dSux = defRoll.total;
-        await this._sendRollToChat(aSux, dSux);
-
-    }
-
-    async _sendRollToChat(a, d) {
-        // render the template
-        // create the chatmessage
-        // include rolls for DSN
-    }
-
-    async _promptTraitRoll() {
-        let atk = 0;
-        let def = 0;
-        // render template
-        // create dialog prompt (I hope)
-        // pull data
-        return {
-            atk: atkSplit,
-            def: defSplit
+        let chatData = {
+            trait:this.name,
+            rating: this.system.rating,
+            rolls:[atkRoll,defRoll],
+            aRolled: atk,
+            dRolled: def,
+            aSuccess:aSux,
+            dSuccess:dSux,
+            aTip: new Handlebars.SafeString(await atkRoll.getTooltip()),
+            dTip: new Handlebars.SafeString(await defRoll.getTooltip())
         }
+        await WushuMessenger.sendChatMessage(chatData);
+
     }
 
     get rating() {

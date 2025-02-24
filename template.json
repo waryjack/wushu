@@ -3,6 +3,6 @@
 		"types": ["hero", "nemesis", "mook", "challenge"]
 	},
     "Item": {
-        "types":["trait", "special"]
+        "types":["trait", "special", "setback"]
     }
 }

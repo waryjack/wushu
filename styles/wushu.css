@@ -1,3 +1,70 @@
 .wushu-traits {
     text-align:left;
 }
+
+
+
+
+/* HERO/NEMESIS SHEET GRID */
+.w-hero-container {  display: grid;
+    grid-template-columns: min-content min-content min-content min-content 128px 256px;
+    grid-template-rows: min-content min-content min-content min-content min-content min-content;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "name name name name img img"
+      "traits traits traits traits img img"
+      "traits traits traits traits img img"
+      "specials specials specials specials img img"
+      "story story story story story story"
+      "story story story story story story";
+  }
+  
+  .w-hero-name { grid-area: name; }
+  
+  .w-hero-traits { grid-area: traits; }
+  
+  .w-hero-specials { grid-area: specials; }
+  
+  .w-hero-story { grid-area: story; }
+  
+  .w-hero-img { grid-area: img; }
+  
+
+/* MOOK GRID */
+
+
+
+/* CHAT MESSAGE GRID */
+.cm-container {  display: grid;
+grid-template-columns: 1fr 1fr 1fr 1fr;
+grid-template-rows: min-content min-content min-content;
+gap: 6px 6px;
+grid-auto-flow: row;
+grid-template-areas:
+    "traitinfo traitinfo traitinfo traitinfo"
+    "atkdice atkdice defdice defdice"
+    "atip atip dtip dtip";
+}
+
+.cm-traitinfo { 
+    grid-area: traitinfo; 
+}
+
+.cm-atkdice { 
+    grid-area: atkdice;
+    justify-items:center;
+}
+
+.cm-defdice { 
+    grid-area: defdice; 
+}
+
+.cm-atip { 
+    grid-area: atip;
+}
+
+.cm-dtip {
+    grid-area: dtip;
+}
+  

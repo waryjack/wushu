@@ -1,6 +1,6 @@
 const { ApplicationV2, HandlebarsApplicationMixin } = foundry.applications.api
 
-export class WushuSettingh extends HandlebarsApplicationMixin(ApplicationV2) {
+export default class WushuPrefSheet extends HandlebarsApplicationMixin(ApplicationV2) {
     static DEFAULT_OPTIONS = {
         id: "prefs-menu",
         position:{

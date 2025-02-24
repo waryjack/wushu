@@ -1,0 +1,30 @@
+<div class="w-hero-container">
+  <div class="w-hero-name">
+    <input 
+	name="name" 
+	type="text" 
+	value="{{actor.name}}" 
+	placeholder="Name"/>
+  </div>
+  <div class="w-hero-traits">
+    {{> 'systems/wushu/templates/partials/traitblock.hbs'}}
+  </div>
+  {{#if (setting "useSpecial")}}
+  <div class="w-hero-specials">
+    {{> 'systems/wushu/templates/partials/specialblock.hbs'}}
+  </div>
+  {{/if}}
+  <div class="w-hero-story">
+    {{> 'systems/wushu/templates/partials/storyblock.hbs'}}
+    {{> 'systems/wushu/templates/partials/gmnotesblock.hbs'}}
+  </div>
+  <div class="w-hero-img">
+    <img class="profile-img ew-cs-img" 
+		 src="{{actor.img}}" 
+		 data-edit="img" 
+         data-action="editImage"
+		 title="{{actor.name}}" 
+		 height="256" 
+		 width="128"/>
+   </div>
+</div>

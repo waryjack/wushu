@@ -14,16 +14,23 @@
                 },
                 "interaction":{
                     "divide_pool":"Choose how to divide your dice:",
-                    "out_of_fight":"You are Out of the Fight."
+                    "out_of_fight":"You are Out of the Fight.",
+                    "rolling":"Rolling "
                 },
                 "chat":{
-                    "atk_outcome":"",
-                    "def_outcome":""
+                    "successes":"Success(es)",
+                    "takedamage":"You lose Health!",
+                    "dealdamage":"You deal damage!"
                 },
                 "titles":{
                     "item":"Item Sheet",
                     "actor":"Character Sheet",
-                    "challenge":"Challenge Sheet"
+                    "challenge":"Challenge Sheet",
+                    "traitroll":"Trait Roll"
+                },
+                "editors":{
+                    "storynotes":"Backstory / Notes",
+                    "gmnotes":"GM Notes"
                 }
             },
             "sheets":{
@@ -41,6 +48,10 @@
                     "other":"Other"
                 }
             }
+        },
+        "dice":{
+            "attack":"Attack Dice",
+            "defense":"Defense Dice"
         },
         "prefs":{
             "dice":{
