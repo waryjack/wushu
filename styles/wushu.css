@@ -13,16 +13,20 @@
     grid-auto-flow: row;
     grid-template-areas:
       "name name name name img img"
+      "health health health health img img"
       "traits traits traits traits img img"
-      "traits traits traits traits img img"
-      "specials specials specials specials img img"
+      "specials specials setbacks setbacks img img"
       "story story story story story story"
       "story story story story story story";
   }
   
   .w-hero-name { grid-area: name; }
   
+  .w-hero-health { grid-area:health }
+
   .w-hero-traits { grid-area: traits; }
+
+  .w-hero-setbacks { grid-area: setbacks; }
   
   .w-hero-specials { grid-area: specials; }
   
@@ -67,4 +71,36 @@ grid-template-areas:
 .cm-dtip {
     grid-area: dtip;
 }
-  
+
+/* ITEM GRID */
+.w-item-container {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: min-content min-content min-content;
+    gap: 6px 6px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "itemname itemname itemname itemrating itemcat"
+    "itemfeat itemfeat itemfeat itemfeat itemfeat"
+    "itemdesc itemdesc itemdesc itemdesc itemdesc"
+}
+
+.w-item-name {
+    grid-area:itemname;
+}
+
+.w-item-rating {
+    grid-area:itemrating
+}
+
+.w-item-category{
+    grid-area:itemcat
+}
+
+.w-item-features{
+    grid-area:itemfeat
+}
+
+.w-item-description{
+    grid-area:itemdesc
+}

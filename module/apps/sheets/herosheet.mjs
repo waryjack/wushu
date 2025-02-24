@@ -77,11 +77,12 @@ export default class WushuActorSheet extends HandlebarsApplicationMixin(ActorShe
         
         data.traits = this.actor.items.filter(i => i.type === "trait");
         data.specials = this.actor.items.filter(i => i.type === "special");
+        data.setbacks = this.actor.items.filter(i => i.type === "setback");
 
         return data;
     }
 
-    static async _rollTrait(e,elem) {
+    static async _rollTrait(e, elem) {
         e.preventDefault();
         let item = this.actor.items.get(elem.dataset.itemId);
         await item._rollItemDice();

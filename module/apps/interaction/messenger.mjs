@@ -31,7 +31,8 @@ export default class WushuMessenger {
 
         return {
             atk: prompt.atk.value,
-            def: prompt.def.value
+            def: prompt.def.value,
+            scab: prompt.scab.checked
         }
     }
 
@@ -39,10 +40,10 @@ export default class WushuMessenger {
      * @param {Object} chatData object containing trait name and rolls
      */
     static async sendChatMessage(chatData) {
-        const chatContent = await renderTemplate(CONFIG.wushu.message.traitroll, chatData);
+        const chatContent = await renderTemplate(chatData.scab ? CONFIG.wushu.message.scabroll : CONFIG.wushu.message.traitroll, chatData);
         ChatMessage.create({
             user:game.user._id,
-            rolls: [atk,def],
+            rolls: rolls,
             speaker:ChatMessage.getSpeaker(),
             content:chatContent
         });

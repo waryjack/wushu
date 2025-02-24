@@ -51,7 +51,10 @@
         },
         "dice":{
             "attack":"Attack Dice",
-            "defense":"Defense Dice"
+            "defense":"Defense Dice",
+            "scabroll":"Scab Roll",
+            "result":"Result",
+            "outcome":"Outcome"
         },
         "prefs":{
             "dice":{
@@ -70,9 +73,10 @@
         "items":{
             "trait":"Trait",
             "weakness":"Weakness",
-            "feature":"Feature",
+            "features":"Features",
             "special":"Special Something",
-            "category":"Category"
+            "category":"Category",
+            "description":"Description / Notes"
         },
         "characters":{
             "hero":"Hero",

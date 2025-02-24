@@ -1,0 +1,17 @@
+<div class="w-hero-health">
+    <table>
+        <tr>
+            <td><strong>{{localize "WUSHU.stats.threat"}}</strong></td>
+            <td>({{threat.rating}})</td>
+            {{#each threat.boxes as |state pos|}}
+            <td>
+            {{#ife state 0}}
+                <a data-action="cycleBox" data-track="threat" data-state="{{state}}" data-pos="{{count}}"><i class="fa-solid fa-skull"></i></a>
+            {{/ife}}
+            {{#ife state 1}}
+                <a data-action="cycleBox" data-track="threat" data-state="{{state}}" data-pos="{{count}}"><span style="color:rgba(0, 0, 0, 0.1)"><i class="fa-solid fa-skull"></i></span></a>
+            {{/ife}}
+            <td>
+        </tr>
+    </table>
+</div>

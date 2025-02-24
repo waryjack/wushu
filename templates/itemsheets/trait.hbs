@@ -1,0 +1,23 @@
+<div class="w-item-container">
+    <div class="w-item-name">
+        <input 
+            name="name" 
+            type="text" 
+            value="{{item.name}}" 
+            placeholder="Name"/>
+    </div>
+    <div class="w-item-rating">
+        <input type="text" name="system.rating" value="{{system.rating}}" data-dtype="Number"/>
+    </div>
+    <div class="w-item-category">
+        <input type="text" name="system.category" value="{{system.category}}" data-dtype="String"/>
+    </div>
+    <div class="w-item-features">
+        {{> "systems/wushu/templates/partials/featureblock.hbs"}}
+    </div>
+    <div class="w-item-description">
+        {{> "systems/wushu/templates/partials/descriptionblock.hbs"}}
+    </div>
+</div>
+
+

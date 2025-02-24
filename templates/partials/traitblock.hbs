@@ -1,12 +1,12 @@
 <table>
-{{#each trait as |trait|}}
+{{#each traits as |item|}}
     <tr>
-        <td><a data-action="rollTrait" data-item-id="{{trait.id}}"><i class="fas fa-dice-six"></i></a></td>
-        <td><a data-action="editItem" data-item-id="{{trait.id}}">{{trait}}</a> ({{trait.rating}})
-            {{#if (setting "useFeatures")}}<br>{{trait.features}}{{/if}}
+        <td><a data-action="rollTrait" data-item-id="{{item.id}}"><i class="fa-solid fa-dice-six"></i></a></td>
+        <td><a data-action="editItem" data-item-id="{{item.id}}">{{trait.name}}</a> ({{item.rating}})
+            {{#if (setting "useFeatures")}}<br>{{item.features}}{{/if}}
         </td>
-        {{#if (setting "useCategories")}}<td>{{trait.category}}</td>{{/if}}
-        <td><a data-action="deleteItem" data-item-id="{{trait.id}}"><i class="fas fa-ban"></i></a></td>
+        {{#if (setting "useCategories")}}<td>{{item.category}}</td>{{/if}}
+        <td><a data-action="deleteItem" data-item-id="{{item.id}}"><i class="fa-solid fa-trash-can"></i></a></td>
     </tr>
 {{/each}}
 </table>

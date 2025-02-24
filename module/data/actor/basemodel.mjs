@@ -37,8 +37,8 @@ export default class WushuActorData extends foundry.abstract.TypeDataModel {
     }
   }
 
-  _cycleHealthBox(pos,value) {
-    this.health.boxes[pos] = (value === 1) ? 0 : 1;
+  async _cycleHealthBox(track, pos,value) {
+    this[track].boxes[pos] = (value === 1) ? 0 : 1;
   }
 }
 
