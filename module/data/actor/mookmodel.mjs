@@ -1,5 +1,5 @@
 const {
-    HTMLField, SchemaField, NumberField, StringField, BooleanField, FilePathField, ObjectField
+    HTMLField, SchemaField, NumberField, ArrayField, BooleanField, FilePathField, ObjectField
   } = foundry.data.fields;
 import WushuActorData from "./basemodel.mjs";
 

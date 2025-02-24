@@ -23,22 +23,22 @@ export default class WushuPrefSheet extends HandlebarsApplicationMixin(Applicati
 
     static PARTS = {
         header: {
-            template: "systems/ewhen/templates/menus/header.hbs"
+            template: "systems/wushu/templates/menus/header.hbs"
         }, 
         tabs:{
-           template: "systems/ewhen/templates/menus/tabs.hbs"
+           template: "systems/wushu/templates/menus/tabs.hbs"
         },
         general: {
-            template: "systems/ewhen/templates/menus/general.hbs"
+            template: "systems/wushu/templates/menus/general.hbs"
         },
         initsettings: {
-            template:"systems/ewhen/templates/menus/initsettings.hbs"
+            template:"systems/wushu/templates/menus/initsettings.hbs"
         },
         trackers: {
-            template:"systems/ewhen/templates/menus/trackers.hbs"
+            template:"systems/wushu/templates/menus/trackers.hbs"
         },
         custname: {
-            template:"systems/ewhen/templates/menus/custname.hbs"
+            template:"systems/wushu/templates/menus/custname.hbs"
         },
         footer: {
             template: "templates/generic/form-footer.hbs"

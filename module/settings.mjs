@@ -1,13 +1,13 @@
 export const registerSettings = function() {
 
-    game.settings.registerMenu("wushu", "settingsMenu", {
+   /* game.settings.registerMenu("wushu", "settingsMenu", {
         name: "WUSHU.SETTINGS.MENU.menuname",
         label: "WUSHU.SETTINGS.MENU.menulabel",
         hint: "WUSHU.SETTINGS.MENU.menuhint",
         icon: "fas fa-bars",
         type: WushuSettingsMenu,
         restricted:true
-    });
+    });*/
     
     game.settings.register("wushu","prefs",{
         scope:"world",

@@ -1,7 +1,7 @@
 const {
-    HTMLField, SchemaField, NumberField, StringField, BooleanField, FilePathField, ObjectField
+    HTMLField, ArrayField, SchemaField, NumberField, StringField, BooleanField, FilePathField, ObjectField
   } = foundry.data.fields;
-import WushuActordata from "./basemodel.mjs";
+import WushuActorData from "./basemodel.mjs";
 
 export default class WushuNemesisData extends WushuActorData {
     static defineSchema() {

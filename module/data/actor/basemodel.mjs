@@ -1,5 +1,5 @@
 const {
-    HTMLField, SchemaField, NumberField, StringField, BooleanField, FilePathField, ObjectField
+    HTMLField, SchemaField, NumberField, ArrayField, BooleanField, FilePathField
   } = foundry.data.fields;
 
 export default class WushuActorData extends foundry.abstract.TypeDataModel {
