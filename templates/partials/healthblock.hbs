@@ -1,17 +1,12 @@
-<div class="w-hero-health">
-    <table>
-        <tr>
-            <td><strong>{{localize "WUSHU.stats.health"}}</strong></td>
-            <td>({{health.rating}})</td>
-            {{#each health.boxes as |state pos|}}
-            <td>
+<div style="font-size:large;">
+    <strong>{{localize "WUSHU.stats.health"}} (<a data-action="decHealth">-</a> {{health.rating}} <a data-action="incHealth">+</a>) </strong>
+    {{#each health.boxes as |state count|}}
             {{#ife state 0}}
-                <a data-action="cycleBox" data-track="health" data-state="{{state}}" data-pos="{{count}}"><i class="fa-solid fa-heart"></i></a>
+                <a data-action="cycleHealthBox" data-track="health" data-state="{{state}}" data-pos="{{count}}"><i class="fa-solid fa-heart"></i></a>
             {{/ife}}
             {{#ife state 1}}
-                <a data-action="cycleBox" data-track="health" data-state="{{state}}" data-pos="{{count}}"><i class="fa-regular fa-heart"></i></a>
+                <a data-action="cycleHealthBox" data-track="health" data-state="{{state}}" data-pos="{{count}}"><i class="fa-regular fa-heart"></i></a>
             {{/ife}}
-            <td>
-        </tr>
-    </table>
+    &nbsp;
+    {{/each}}
 </div>

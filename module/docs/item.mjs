@@ -16,17 +16,21 @@ export default class WushuItem extends Item {
     }
 
     async _rollItemDice(trait) {
-        if (this.parent.type != "trait") return;
-        
+        if (this.type != "trait") return;
+        let chatData = {};
+        let rollData = this.getRollData();
+        rollData.traitname = this.name;
 
         // prompt here
-        const breakdown = WushuMessenger.rollPrompt(this.name, this.getRollData());
+        const breakdown = await WushuMessenger.rollPrompt(this.getRollData());
+        console.log(breakdown);
 
         if(breakdown.scab) {
             // formula is $kl1
             let formula = this.system.rating+"d6kl1";
             let scabRoll = new Roll(formula);
-            scabRoll.evaluate();
+            await scabRoll.evaluate();
+            console.log(scabRoll.total);
             let outcome = "";
             switch(scabRoll.total){
                 case 1: outcome = "Solid success. Good work!"; break;
@@ -37,7 +41,7 @@ export default class WushuItem extends Item {
                 case 6: outcome = "Disastrous failure.";break;
                 default: outcome = "Unable to determine outcome."
             }
-            let chatData = {
+            chatData = {
                 scab:true,
                 trait:this.name,
                 rating: this.system.rating,
@@ -60,15 +64,16 @@ export default class WushuItem extends Item {
             await atkRoll.evaluate();
             await defRoll.evaluate();
 
-            aSux = atkRoll.total;
-            dSux = defRoll.total;
-            let chatData = {
+
+            let  aSux = atkRoll.total;
+            let dSux = defRoll.total;
+            chatData = {
                 scab:false,
                 trait:this.name,
                 rating: this.system.rating,
                 rolls:[atkRoll,defRoll],
-                aRolled: atk,
-                dRolled: def,
+                aRolled: breakdown.atk,
+                dRolled: breakdown.def,
                 aSuccess:aSux,
                 dSuccess:dSux,
                 aTip: new Handlebars.SafeString(await atkRoll.getTooltip()),

@@ -7,9 +7,9 @@
 
 /* HERO/NEMESIS SHEET GRID */
 .w-hero-container {  display: grid;
-    grid-template-columns: min-content min-content min-content min-content 128px 256px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: min-content min-content min-content min-content min-content min-content;
-    gap: 0px 0px;
+    gap: 12px 12px;
     grid-auto-flow: row;
     grid-template-areas:
       "name name name name img img"
@@ -22,9 +22,10 @@
   
   .w-hero-name { grid-area: name; }
   
-  .w-hero-health { grid-area:health }
+  .w-hero-health { grid-area:health; 
+    justify-items:start; }
 
-  .w-hero-traits { grid-area: traits; }
+  .w-hero-traits { grid-area: traits; justify-items:start; }
 
   .w-hero-setbacks { grid-area: setbacks; }
   
@@ -36,6 +37,30 @@
   
 
 /* MOOK GRID */
+.w-mook-container {
+    display:grid;
+    grid-template-columns: 300px;
+    grid-template-rows: min-content min-content min-content;
+    gap:6px 6px;
+    grid-auto-flow:row;
+    grid-template-areas:
+        "mookname"
+        "mookthreat"
+        "mookimg"
+        ;
+}
+
+.w-mook-name {
+    grid-area:mookname;
+}
+
+.w-mook-threat{
+    grid-area:mookthreat
+}
+
+.w-mook-img {
+    grid-area:mookimg;
+}
 
 
 
@@ -80,17 +105,18 @@ grid-template-areas:
     gap: 6px 6px;
     grid-auto-flow: row;
     grid-template-areas:
-    "itemname itemname itemname itemrating itemcat"
+    "itemspecs itemspecs itemspecs itemspecs itemspecs"
     "itemfeat itemfeat itemfeat itemfeat itemfeat"
-    "itemdesc itemdesc itemdesc itemdesc itemdesc"
+    "itemdesc itemdesc itemdesc itemdesc itemdesc";
+    margin-right:12px;
 }
 
 .w-item-name {
     grid-area:itemname;
 }
 
-.w-item-rating {
-    grid-area:itemrating
+.w-item-specs {
+    grid-area:itemspecs
 }
 
 .w-item-category{

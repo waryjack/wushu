@@ -1,28 +1,22 @@
-<div class="w-hero-container">
-  <div class="w-hero-name">
+<div class="w-mook-container">
+  <div class="w-mook-name" >
     <input 
+    style="font-size:x-large;"
 	name="name" 
 	type="text" 
 	value="{{actor.name}}" 
 	placeholder="Name"/>
   </div>
-  <div class="w-hero-traits">
-    <strong>{{localize "WUSHU.stats.threat"}} {{threat.rating}}</strong>
-  </div>
-  <div class="w-hero-health">
+  <div class="w-mook-threat">
     {{> 'systems/wushu/templates/partials/threatblock.hbs'}}
   </div>
-  <div class="w-hero-story">
-    {{> 'systems/wushu/templates/partials/storyblock.hbs'}}
-    {{> 'systems/wushu/templates/partials/gmnotesblock.hbs'}}
-  </div>
-  <div class="w-hero-img">
+  <div class="w-mook-img">
     <img class="profile-img ew-cs-img" 
 		 src="{{actor.img}}" 
 		 data-edit="img" 
          data-action="editImage"
 		 title="{{actor.name}}" 
-		 height="256" 
-		 width="128"/>
+		 height="300" 
+		 width="300"/>
    </div>
 </div>

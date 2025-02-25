@@ -1,0 +1,23 @@
+<div class="cm-container">
+  <div class="cm-traitinfo">
+    <h3>{{trait}} ({{rating}})</h3>
+  </div>
+  <div class="cm-atkdice">
+    <h3>Attack {{aRolled}}D6</h3>
+    {{aSuccess}} {{localize "WUSHU.ui.dialogs.chat.successes"}}
+   
+  </div>
+  <div class="cm-defdice">
+    <h3>Defense {{dRolled}}D6</h3>
+    {{dSuccess}} {{localize "WUSHU.ui.dialogs.chat.successes"}}
+    
+  </div>
+  <div>
+    {{#if (gt aSuccess 0)}}{{localize "WUSHU.ui.dialogs.chat.dealdamage"}}{{/if}}
+    {{#ife dSuccess 0}}{{localize "WUSHU.ui.dialogs.chat.takedamage"}}{{/ife}}
+  </div>
+  <div style="display:none">
+  <div class="cm-atip">{{aTip}}</div>
+  <div class="cm-dtip">{{dTip}}</div>
+  </div>
+</div>

@@ -18,7 +18,8 @@ Hooks.once("init", () => {
 
     // Register system sheets
     Actors.unregisterSheet("core", ActorSheet);
-    Actors.registerSheet("wushu", apps.WushuActorSheet, {types:["hero","mook","nemesis"], makeDefault:true});
+    Actors.registerSheet("wushu", apps.WushuActorSheet, {types:["hero","nemesis"], makeDefault:true});
+    Actors.registerSheet("wushu", apps.WushuMookSheet, {types:["mook"], makeDefault:true});
     Actors.registerSheet("wushu", apps.WushuChallengeSheet, {types:["challenge"],makeDefault:true});
 
     Items.unregisterSheet("core", ItemSheet);
@@ -45,5 +46,25 @@ Hooks.once("init", () => {
     // settings and templates
     registerSettings();
     preloadHandlebarsTemplates();
+
+     // Register handlebar helpers //
+    Handlebars.registerHelper('ife', function(arg1, arg2, options) {
+        return (arg1 == arg2) ? options.fn(this) : options.inverse(this);
+    });
+
+    Handlebars.registerHelper("setting", function(arg){
+        // console.warn("Passed Setting Name: ", arg);
+        if (arg == "" || arg == "non" || arg == undefined) { return ; }
+        return game.settings.get('wushu', 'prefs')[arg];
+    });
+
+    Handlebars.registerHelper("proper", function(content) {
+        let result = "";
+
+        result = content[0].toUpperCase() + content.substring(1);
+
+        return result;
+
+    });
 
 });

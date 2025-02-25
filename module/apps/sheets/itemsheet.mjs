@@ -11,13 +11,13 @@ export default class WushuItemSheet extends HandlebarsApplicationMixin(ItemSheet
                 closeOnSubmit: false,
         },
         position:{
-            width:500,
+            width:400,
             height:400,
             left:120
         },
         tag:"form",
         window:{
-            title:"WUSHU.ui.titles.item",
+            title:"WUSHU.ui.dialogs.titles.item",
             contentClasses:['scrollable','standard-form'],
             resizable:true
         }
@@ -66,8 +66,23 @@ export default class WushuItemSheet extends HandlebarsApplicationMixin(ItemSheet
 
     }
 
-    static async _onEditImage(){
-        if (target.nodeName !== "IMG") {
+    /** @override */
+    async _prepareContext(options) {
+        console.log("This.item: ", this.item);
+        console.log("This.parent: ", this.parent);
+        const data = foundry.utils.deepClone(this.item.system);
+        data.config = CONFIG.wushu;
+        data.item = this.item;
+        data.enrichedFeats =  await TextEditor.enrichHTML(this.item.system.features);
+        data.enrichedDesc = await TextEditor.enrichHTML(this.item.system.description);
+        
+        console.log("Item sheet context: ", data);
+        return data;
+    }
+
+    static async _onEditImage(_event, target){
+        
+        if (element.nodeName !== "IMG") {
             throw new Error("The editImage action is available only for IMG elements.");
           }
           const attr = target.dataset.edit;

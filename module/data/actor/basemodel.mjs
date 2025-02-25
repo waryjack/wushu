@@ -35,10 +35,30 @@ export default class WushuActorData extends foundry.abstract.TypeDataModel {
     if(this.health.boxes.reduce((sum, v) => sum + v, 0) == this.health.boxes.rating) {
       this.health.oof = true;
     }
+
   }
 
-  async _cycleHealthBox(track, pos,value) {
-    this[track].boxes[pos] = (value === 1) ? 0 : 1;
+  async _cycleHealthBox(track, pos, state) {
+    console.log("entered cycle healthbox");
+    console.log("track: ", track);
+    console.log("pos: ", pos);
+    console.log("state: ", state, typeof(state));
+    
+    let boxes = (track === "health") ? this.health.boxes : this.threat.boxes;
+    let newState = (Number(state) === 1) ? 0 : 1;
+    
+    boxes[pos] = newState;
+    await this.actor.update({[`system.${track}.boxes`]:boxes})
+  }
+
+  async _increaseHealth() {
+    let ch = this.health.rating + 1;
+    await this.actor.update({"system.health.rating":ch})
+  }
+
+  async _decreaseHealth() {
+    let ch = Math.max(this.health.rating - 1, 0);
+    await this.actor.update({"system.health.rating":ch})
   }
 }
 

@@ -6,11 +6,11 @@ export default class WushuMessenger {
      * @param {String} trait the name of the selected trait
      * @param {Object} data number of dice to roll
      */
-    static async rollPrompt(trait, data){
+    static async rollPrompt(data){
         const promptContent = await renderTemplate(CONFIG.wushu.dialog.traitroll, data)
-        const promptInfo = await DialogV2.prompt({
+        const prompt = await DialogV2.wait({
             window: { title: "WUSHU.ui.titles.traitroll"},
-                content: content,
+                content: promptContent,
                 classes: ["wushu-dialog"],
                 buttons: [{
                     action:"roll",
@@ -43,7 +43,7 @@ export default class WushuMessenger {
         const chatContent = await renderTemplate(chatData.scab ? CONFIG.wushu.message.scabroll : CONFIG.wushu.message.traitroll, chatData);
         ChatMessage.create({
             user:game.user._id,
-            rolls: rolls,
+            rolls: chatData.rolls,
             speaker:ChatMessage.getSpeaker(),
             content:chatContent
         });

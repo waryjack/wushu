@@ -7,6 +7,7 @@ export default class WushuItemData extends foundry.abstract.TypeDataModel {
         return {
             img: new FilePathField({required:false, categories:["IMAGE"]}),
             rating: new NumberField({integer:true, required:true, min:1, max:5}),
+            category: new StringField({required:true, initial:""}),
             description: new HTMLField({required:true, initial:""}),
             features: new HTMLField({required:true, initial:""}),
         }

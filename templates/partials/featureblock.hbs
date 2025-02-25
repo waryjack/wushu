@@ -1,10 +1,10 @@
 <div>
-    <h3>{{localize "WUSHU.item.features"}}</h3>
+    <h3>{{localize "WUSHU.items.features"}}</h3>
     <prose-mirror name="system.features" 
-                      data-document-u-u-i-d="{{item.uuid}}" 
-                      value="{{enrichedDescription}}" 
-                      collaborate="true" 
-                      toggled="false">
-            {{{enrichedDescription}}}
+                      data-document-u-u-i-d="{{parent.uuid}}" 
+                      value="{{enrichedFeats}}" 
+                      collaborate="false" 
+                      toggled="true">
+            {{{enrichedFeats}}}
     </prose-mirror>
 </div>

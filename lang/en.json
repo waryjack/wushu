@@ -1,91 +1,64 @@
 {
-    "WUSHU": {
-        "ui": {  
-            "dialogs":{
-                "buttons":{
-                    "yes":"Yes",
-                    "no":"No",
-                    "roll":"Roll",
-                    "cancel":"Cancel"
-                },
-                "confirmations":{
-                    "delete_trait":"Are you sure you want to delete this Trait?",
-                    "delete_special":"Are you sure you want to delete this Special Something?"
-                },
-                "interaction":{
-                    "divide_pool":"Choose how to divide your dice:",
-                    "out_of_fight":"You are Out of the Fight.",
-                    "rolling":"Rolling "
-                },
-                "chat":{
-                    "successes":"Success(es)",
-                    "takedamage":"You lose Health!",
-                    "dealdamage":"You deal damage!"
-                },
-                "titles":{
-                    "item":"Item Sheet",
-                    "actor":"Character Sheet",
-                    "challenge":"Challenge Sheet",
-                    "traitroll":"Trait Roll"
-                },
-                "editors":{
-                    "storynotes":"Backstory / Notes",
-                    "gmnotes":"GM Notes"
-                }
-            },
-            "sheets":{
-                "backstory":"Backstory",
-                "description":"Description",
-                "notes":"Notes",
-                "consequence":"Consequences",
-                "name":"Name"
-            },
-            "items":{
-                "categories":{
-                    "combat":"Combat",
-                    "social":"Social",
-                    "technical":"Technical",
-                    "other":"Other"
-                }
-            }
-        },
-        "dice":{
-            "attack":"Attack Dice",
-            "defense":"Defense Dice",
-            "scabroll":"Scab Roll",
-            "result":"Result",
-            "outcome":"Outcome"
-        },
-        "prefs":{
-            "dice":{
-                "D6":"D6",
-                "D8":"D8",
-                "D10":"D10",
-                "D12":"D12"
-            }
-        },
-        "stats":{
-            "health":"Health",
-            "threat":"Threat",
-            "goal":"Goal",
-            "time":"Time Limit"
-        },
-        "items":{
-            "trait":"Trait",
-            "weakness":"Weakness",
-            "features":"Features",
-            "special":"Special Something",
-            "category":"Category",
-            "description":"Description / Notes"
-        },
-        "characters":{
-            "hero":"Hero",
-            "nemesis":"Nemesis",
-            "mook":"Mook"
-        },
-        "game":{
-            "secondary_goal":"Secondary Goal",
-            "challenge":"Challenge"
-        }
-    }
+    "WUSHU.ui.dialogs.buttons.yes": "Yes",
+    "WUSHU.ui.dialogs.buttons.no": "No",
+    "WUSHU.ui.dialogs.buttons.roll": "Roll",
+    "WUSHU.ui.dialogs.buttons.cancel": "Cancel",
+    "WUSHU.ui.dialogs.confirmations.delete_trait": "Are you sure you want to delete this Trait?",
+    "WUSHU.ui.dialogs.confirmations.delete_special": "Are you sure you want to delete this Special Something?",
+    "WUSHU.ui.dialogs.interaction.divide_pool": "Choose how to divide your dice:",
+    "WUSHU.ui.dialogs.interaction.out_of_fight": "You are Out of the Fight.",
+    "WUSHU.ui.dialogs.interaction.rolling": "Rolling ",
+    "WUSHU.ui.dialogs.chat.successes": "Success(es)",
+    "WUSHU.ui.dialogs.chat.takedamage": "You lose Health!",
+    "WUSHU.ui.dialogs.chat.dealdamage": "You deal damage!",
+    "WUSHU.ui.dialogs.titles.item": "Item Sheet",
+    "WUSHU.ui.dialogs.titles.actor": "Character Sheet",
+    "WUSHU.ui.dialogs.titles.challenge": "Challenge Sheet",
+    "WUSHU.ui.dialogs.titles.traitroll": "Trait Roll",
+    "WUSHU.ui.dialogs.editors.storynotes": "Backstory / Notes",
+    "WUSHU.ui.dialogs.editors.gmnotes": "GM Notes",
+
+    
+    "WUSHU.ui.sheets.backstory": "Backstory",
+    "WUSHU.ui.sheets.description": "Description",
+    "WUSHU.ui.sheets.notes": "Notes",
+    "WUSHU.ui.sheets.consequence": "Consequences",
+    "WUSHU.ui.sheets.name": "Name",
+
+
+    "WUSHU.ui.items.categories.combat": "Combat",
+    "WUSHU.ui.items.categories.social": "Social",
+    "WUSHU.ui.items.categories.technical": "Technical",
+    "WUSHU.ui.items.categories.other": "Other",
+
+    "WUSHU.dice.attack": "Attack Dice",
+    "WUSHU.dice.defense": "Defense Dice",
+    "WUSHU.dice.scabroll": "Scab Roll",
+    "WUSHU.dice.result": "Result",
+    "WUSHU.dice.outcome": "Outcome",
+
+    "WUSHU.prefs.dice.D6": "D6",
+    "WUSHU.prefs.dice.D8": "D8",
+    "WUSHU.prefs.dice.D10": "D10",
+    "WUSHU.prefs.dice.D12": "D12",
+
+    "WUSHU.stats.health": "Health",
+    "WUSHU.stats.threat": "Threat",
+    "WUSHU.stats.goal": "Goal",
+    "WUSHU.stats.time": "Time Limit",
+
+    "WUSHU.items.trait": "Trait",
+    "WUSHU.items.weakness": "Weakness",
+    "WUSHU.items.features": "Features",
+    "WUSHU.items.special": "Special Something",
+    "WUSHU.items.category": "Category",
+    "WUSHU.items.description": "Description / Notes",
+    "WUSHU.items.rating":"Rating",
+
+    "WUSHU.characters.hero": "Hero",
+    "WUSHU.characters.nemesis": "Nemesis",
+    "WUSHU.characters.mook": "Mook",
+    
+    "WUSHU.game.secondary_goal": "Secondary Goal",
+    "WUSHU.game.challenge": "Challenge"
 }
