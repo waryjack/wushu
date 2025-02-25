@@ -1,9 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap');
+
+.pr {
+    font-family: "Protest Revolution", serif;
+    font-weight: 400;
+    font-style: regular;
+  }
+
+#pr {
+    font-family: "Protest Revolution", serif;
+    font-weight: 400;
+    font-style: regular;
+  }
+
+  
+
 .wushu-traits {
     text-align:left;
 }
-
-
-
 
 /* HERO/NEMESIS SHEET GRID */
 .w-hero-container {  display: grid;

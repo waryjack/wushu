@@ -24,6 +24,7 @@
     "WUSHU.ui.sheets.notes": "Notes",
     "WUSHU.ui.sheets.consequence": "Consequences",
     "WUSHU.ui.sheets.name": "Name",
+    "WUSHU.ui.sheets.traits":"Traits",
 
 
     "WUSHU.ui.items.categories.combat": "Combat",
@@ -48,6 +49,7 @@
     "WUSHU.stats.time": "Time Limit",
 
     "WUSHU.items.trait": "Trait",
+    
     "WUSHU.items.weakness": "Weakness",
     "WUSHU.items.features": "Features",
     "WUSHU.items.special": "Special Something",
